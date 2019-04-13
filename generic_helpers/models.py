@@ -41,7 +41,7 @@ def generic_relation_factory(ct_field='content_type', fk_field='object_pk',
                                          default='', blank=blank, null=blank)
     fk = fk_field_type
 
-    gr = GenericForeignKey(on_delete=models.CASCADE, ct_field=ct_field, fk_field=fk_field)
+    gr = GenericForeignKey(ct_field=ct_field, fk_field=fk_field)
 
     class Meta(object):
         abstract = True
